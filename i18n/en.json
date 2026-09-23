@@ -1,0 +1,19 @@
+{
+  "plugin.blacklist-ip.page_title": "IP Blocklist - Silo",
+  "plugin.blacklist-ip.title": "IP Blocklist",
+  "plugin.blacklist-ip.back": "Back",
+  "plugin.blacklist-ip.settings_title": "Settings",
+  "plugin.blacklist-ip.blocklist": "IP Blocklist",
+  "plugin.blacklist-ip.blocklist_desc": "One IP or IP range per line. Lines starting with # are comments.",
+  "plugin.blacklist-ip.default": "Insert template",
+  "plugin.blacklist-ip.reset": "Clear",
+  "plugin.blacklist-ip.save": "Save & Apply",
+  "plugin.blacklist-ip.saved": "Saved",
+  "plugin.blacklist-ip.reset_done": "Cleared",
+  "plugin.blacklist-ip.confirm_reset": "Clear the blocklist?",
+  "plugin.blacklist-ip.confirm_template": "Replace current list with template?",
+  "plugin.blacklist-ip.cancel": "Cancel",
+  "plugin.blacklist-ip.ok": "OK",
+  "plugin.blacklist-ip.reset_title": "Clear blocklist",
+  "plugin.blacklist-ip.template_title": "Replace list"
+}

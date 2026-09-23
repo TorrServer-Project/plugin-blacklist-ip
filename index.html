@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="plugin.blacklist-ip.page_title">IP Blocklist - Silo</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/i18n.js"></script>
+    <style>
+        .page-wrap {
+            display: flex;
+            justify-content: center;
+            padding: 24px 32px;
+            min-height: 100vh;
+        }
+        .page-inner {
+            width: 100%;
+            max-width: 800px;
+        }
+        .panel {
+            max-width: 100%;
+        }
+        @media (max-width: 767px) {
+            .page-wrap {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <div class="page-inner">
+        <header class="topbar">
+            <h1 id="page-title" data-i18n="plugin.blacklist-ip.title">IP Blocklist</h1>
+            <a href="/" class="btn btn-secondary btn-sm" data-i18n="plugin.blacklist-ip.back">Back</a>
+        </header>
+
+        <section id="view">
+            <div class="panel">
+                <h2 data-i18n="plugin.blacklist-ip.settings_title">Settings</h2>
+
+                <fieldset class="subblock">
+                    <legend data-i18n="plugin.blacklist-ip.blocklist">IP Blocklist</legend>
+                    <label class="field">
+                        <span data-i18n="plugin.blacklist-ip.blocklist_desc">One IP or IP range per line. Lines starting with # are comments.</span>
+                        <textarea
+                                class="input"
+                                id="blocklist"
+                                rows="18"
+                                placeholder="1.2.3.4 - 1.2.3.255"
+                                spellcheck="false"
+                                style="font-family: 'JetBrains Mono', monospace; font-size: 13px; resize: vertical;"
+                        ></textarea>
+                    </label>
+                </fieldset>
+
+                <div class="row" style="justify-content: flex-end; margin-top: 8px;">
+                    <button class="btn btn-secondary" id="btn-default" type="button" data-i18n="plugin.blacklist-ip.default">Insert template</button>
+                    <button class="btn btn-secondary" id="btn-reset" type="button" data-i18n="plugin.blacklist-ip.reset">Clear</button>
+                    <button class="btn" id="btn-save" type="button" data-i18n="plugin.blacklist-ip.save">Save & Apply</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="modal-overlay" id="confirm-overlay" style="display:none;">
+    <div class="modal" role="dialog" aria-modal="true">
+        <div class="modal-header">
+            <h2 id="confirm-title"></h2>
+            <button class="modal-close" id="confirm-x" type="button" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p class="confirm-text" id="confirm-text"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="confirm-cancel" type="button" data-i18n="plugin.blacklist-ip.cancel">Cancel</button>
+            <button class="btn btn-danger" id="confirm-ok" type="button" data-i18n="plugin.blacklist-ip.ok">OK</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="/plugins/blacklist-ip/js/app.js"></script>
+</body>
+</html>

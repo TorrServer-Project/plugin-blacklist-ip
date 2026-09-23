@@ -1,0 +1,25 @@
+id: "blacklist-ip"
+name: "IP Blocklist"
+version: "1.0.0"
+author: "YouROK"
+description: "Global IP blocklist manager for the torrent engine"
+entry: "service.js"
+icon: "/img/ico-blacklist-ip.svg"
+
+menu:
+  - title: "IP Blocklist"
+    title_key: "plugin.blacklist-ip.title"
+    route: "/"
+    rank: 100
+    icon: "/img/ico-blacklist-ip.svg"
+
+routes:
+  - "/"
+  - "/index.html"
+  - "/js/*"
+  - "/img/*"
+  - "/api/config"
+  - "/api/save"
+  - "/api/reset"
+
+events: []

@@ -1,0 +1,19 @@
+{
+  "plugin.blacklist-ip.page_title": "IP-блоклист - Silo",
+  "plugin.blacklist-ip.title": "IP-блоклист",
+  "plugin.blacklist-ip.back": "Назад",
+  "plugin.blacklist-ip.settings_title": "Настройки",
+  "plugin.blacklist-ip.blocklist": "Список IP",
+  "plugin.blacklist-ip.blocklist_desc": "Один IP или диапазон на строку. Строки, начинающиеся с #, это комментарии.",
+  "plugin.blacklist-ip.default": "Вставить шаблон",
+  "plugin.blacklist-ip.reset": "Очистить",
+  "plugin.blacklist-ip.save": "Сохранить и применить",
+  "plugin.blacklist-ip.saved": "Сохранено",
+  "plugin.blacklist-ip.reset_done": "Очищено",
+  "plugin.blacklist-ip.confirm_reset": "Очистить список?",
+  "plugin.blacklist-ip.confirm_template": "Заменить текущий список шаблоном?",
+  "plugin.blacklist-ip.cancel": "Отмена",
+  "plugin.blacklist-ip.ok": "ОК",
+  "plugin.blacklist-ip.reset_title": "Очистить список",
+  "plugin.blacklist-ip.template_title": "Заменить список"
+}
