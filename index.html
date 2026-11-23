@@ -24,9 +24,25 @@
         .panel {
             max-width: 100%;
         }
+        /* Список адресов: моноширинный шрифт и ручной размер */
+        .code-area {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            resize: vertical;
+        }
+        /* Кнопки панели прижаты вправо */
+        .actions-row {
+            justify-content: flex-end;
+            margin-top: 8px;
+        }
         @media (max-width: 767px) {
             .page-wrap {
-                padding: 16px;
+                padding: 12px;
+            }
+            /* Список занимает часть экрана, чтобы кнопки оставались на виду */
+            .code-area {
+                height: 44vh;
+                min-height: 160px;
             }
         }
     </style>
@@ -48,17 +64,18 @@
                     <label class="field">
                         <span data-i18n="plugin.blacklist-ip.blocklist_desc">One IP or IP range per line. Lines starting with # are comments.</span>
                         <textarea
-                                class="input"
+                                class="input code-area"
                                 id="blocklist"
                                 rows="18"
                                 placeholder="1.2.3.4 - 1.2.3.255"
+                                autocapitalize="off"
+                                autocorrect="off"
                                 spellcheck="false"
-                                style="font-family: 'JetBrains Mono', monospace; font-size: 13px; resize: vertical;"
                         ></textarea>
                     </label>
                 </fieldset>
 
-                <div class="row" style="justify-content: flex-end; margin-top: 8px;">
+                <div class="row actions-row">
                     <button class="btn btn-secondary" id="btn-default" type="button" data-i18n="plugin.blacklist-ip.default">Insert template</button>
                     <button class="btn btn-secondary" id="btn-reset" type="button" data-i18n="plugin.blacklist-ip.reset">Clear</button>
                     <button class="btn" id="btn-save" type="button" data-i18n="plugin.blacklist-ip.save">Save & Apply</button>
@@ -84,7 +101,7 @@
     </div>
 </div>
 
-<div id="toast" class="toast"></div>
+<div id="toast-root" class="toast-root"></div>
 
 <script src="/plugins/blacklist-ip/js/app.js"></script>
 </body>
