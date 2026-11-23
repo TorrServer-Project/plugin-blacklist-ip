@@ -1,6 +1,6 @@
 id: "blacklist-ip"
 name: "IP Blocklist"
-version: "1.0.0"
+version: "1.0.1"
 author: "YouROK"
 description: "Global IP blocklist manager for the torrent engine"
 entry: "service.js"
